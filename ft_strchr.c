@@ -6,20 +6,24 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 16:01:25 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/09 16:23:58 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/09 16:45:10 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-const char*	ft_strchr(const char *string, int symbol)
+int		ft_strlen(char *str);
+
+const char*		ft_strchr(const char *string, int symbol)
 {
 	int counter;
+	char *copy_string;
 
+	*copy_string = strcpy(
 	counter = 0;
-	while (symbol != string[counter])
+	while (counter < len)
 		{
+			if (string[counter] == symbol)
+				return(&string[counter]);
 			counter++;
-			if (symbol == string[counter])
-				return(string[counter]);
 		}	
 	return (0);
 }
