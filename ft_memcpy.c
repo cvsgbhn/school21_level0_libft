@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/12 14:59:34 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/12 19:37:09 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/12 17:57:06 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/12 19:39:42 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *str, int c, size_t n)
+void	*ft_memcpy(void *str1, const void *str2, size_t n)
 {
-	unsigned char *true_str; 
-		
-	true_str = (unsigned char *)str;
+	unsigned char *destination;
+	unsigned char *source;
+
+	destination = (unsigned char *)str1;
+	source = (unsigned char *)str2;
 	while (n > 0)
 	{
-		*true_str = c;
-		true_str++;
+		*destination = *source;
+		destination++;
+		source++;
 		n--;
 	}
-	return (true_str);
+	return (destination);
 }
