@@ -6,13 +6,13 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 14:30:19 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/12 14:51:53 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/12 15:02:10 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void    *ft_memset(void *str, int c, size_t n);
+void	*ft_memset(void *str, int c, size_t n);
 
 void	ft_bzero(void *s, size_t n)
 {
