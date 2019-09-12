@@ -2,7 +2,7 @@
 
 void	*ft_memset(void *str, int c, size_t n)
 {
-	unsigned char *true_str = str;
+	unsigned char *true_str = (unsigned char *)str;
 
 	while (n > 0)
 	{
@@ -10,5 +10,5 @@ void	*ft_memset(void *str, int c, size_t n)
 		true_str++;
 		n--;
 	}
-	return (str);
+	return (true_str);
 }
