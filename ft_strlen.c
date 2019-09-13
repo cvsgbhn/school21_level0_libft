@@ -1,12 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/04 14:03:27 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/13 19:01:18 by vdanilo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_libft.h"
+
 int	ft_strlen(char *str)
 {
-	int	len_counter;
-	
-	len_counter = 0;
+	int counter;
+
+	counter = 0;
 	while (*str)
 	{
-		len_counter++;
+		counter++;
 		str++;
 	}
-	return (len_counter);
+	return (counter);
 }

@@ -6,9 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 16:46:28 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/09 17:20:50 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/13 19:01:43 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_libft.h"
 
 char *	ft_strncpy(char *destination, char *source, int len)
 {
