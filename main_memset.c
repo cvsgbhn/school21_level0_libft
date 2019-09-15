@@ -4,6 +4,7 @@
 void	*ft_memset(void *str, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void    *ft_memcpy(void *str1, const void *str2, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 int		main(void)
 {
@@ -25,5 +26,7 @@ int		main(void)
 	ft_memcpy(mem3, mem4, 5);
 	printf("%s\n", mem3);
 	printf("%s\n", mem4);
+	ft_memccpy(mem, mem4, 'l', 6);
+	printf("%s\n %s\n", mem, mem4);
 	return(0);
 }

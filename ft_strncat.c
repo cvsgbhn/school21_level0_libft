@@ -12,7 +12,7 @@
 
 #include "ft_libft.h"
 
-char	*ft_strcat(char *destination, const char *const_src)
+char	*ft_strcat(char *destination, const char *const_src, size_t number)
 {
 	char *end_of_dest;
 	int counter;
@@ -21,6 +21,6 @@ char	*ft_strcat(char *destination, const char *const_src)
 	while(destination[counter])
 		counter++;
 	end_of_dest = &(destination[counter]);
-	ft_memcpy(end_of_dest, const_src, ft_strlen(const_src));
+	ft_memcpy(end_of_dest, const_src, number);
 	return (destination);
 }
