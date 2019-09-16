@@ -1,13 +1,26 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/16 19:12:01 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/16 19:15:11 by vdanilo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char	*ft_strcat(char *destination, const char *const_source);
+#include "ft_libft.h"
 
-int	main(void)
+char	*ft_strcat(char *destination, const char *const_src)
 {
-	char *destination = "we are all";
-	char *source = " going to burn in hell";
+	char	*end_of_dest;
+	int		counter;
 
-	ft_strcat(destination, source);
-	printf("%s", destination);
-	return (0);
+	counter = 0;
+	while (destination[counter])
+		counter++;
+	end_of_dest = &(destination[counter]);
+	ft_memcpy(end_of_dest, const_src, ft_strlen(const_src));
+	return (destination);
 }

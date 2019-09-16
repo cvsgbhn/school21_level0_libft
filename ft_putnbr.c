@@ -6,9 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 09:13:26 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/08/06 15:04:35 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/16 19:49:38 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "f_libft.h"
 
 void	ft_putchar(char c);
 void	ft_putnbr(int nb);

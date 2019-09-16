@@ -6,13 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:13:41 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/13 18:58:46 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/16 19:20:16 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
-
-char	*ft_strncpy(char *destination, char *source, int len);
 
 void	*ft_memmove(void *adestination, const void *asource, size_t n)
 {
@@ -22,5 +20,5 @@ void	*ft_memmove(void *adestination, const void *asource, size_t n)
 	source = (char *)asource;
 	ft_strncpy(temp_array, source, n);
 	ft_strncpy(adestination, temp_array, n);
-	return(adestination);
+	return (adestination);
 }

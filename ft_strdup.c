@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 15:04:30 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/16 15:26:10 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/16 19:50:53 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft_libft.h"
 
 char	*ft_strdup(const char *src)
 {

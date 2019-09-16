@@ -6,11 +6,11 @@
 #    By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/05 16:56:59 by vdanilo           #+#    #+#              #
-#    Updated: 2019/09/13 18:27:47 by vdanilo          ###   ########.fr        #
+#    Updated: 2019/09/16 18:51:47 by vdanilo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = "libft"
+NAME = "libft.a"
 
 SOURCES = ./*.c
 
@@ -20,11 +20,13 @@ INCLUDES = ./ft_libft.h
 
 .PHONY: all clean fclean re
 
-all: display_file 
+all: $(NAME) 
 
-display_file: 
-	gcc -c -Wall -Wextra -Werror $(SOURCES) -I $(INCLUDES)
-	gcc -o $(NAME) $(OBJECTS)
+$(NAME):
+	flex -t *.o > *.c
+	gcc -Wall -Wextra -Werror -c $(SOURCES) -I $(INCLUDES)
+	ar rc $(NAME) $(OBJECTS)
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -rf *.o
