@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/12 17:57:06 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/17 17:56:40 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/17 18:13:19 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/17 18:48:54 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-void	*ft_memcpy(void *str1, const void *str2, size_t n)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	char	*destination;
-	char	*source;
-	size_t	counter;
-
-	destination = (char *)str1;
-	source = (char *)str2;
-	counter = 0;
-	while (counter < n)
+	while (*s)
 	{
-		destination[counter] = source[counter];
-		counter++;
+		f(s);
+		s++;
 	}
-	destination[counter] = '\0';
-	return (destination);
 }

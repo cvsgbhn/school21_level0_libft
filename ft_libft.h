@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 16:18:08 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/17 16:10:52 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/17 18:48:15 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,26 @@ int		ft_toupper(int character);
 int		ft_tolower(int character);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
-
+//ft_memalloc
+//ft_memdel
+//ft_strnew
+//ft_strdel
+void    ft_strclr(char *s);
+void    ft_striter(char *s, void (*f)(char *));
+void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+//ft_strmap
+//ft_strmapi
+int     ft_strequ(char const *s1, char const *s2);
+int     ft_strnequ(char const *s1, char const *s2, size_t n);
+//ft_strsub
+//ft_strjoin
+//ft_strtrim
+//ft_strsplit
+//ft_itoa
+void    ft_putendl(char const *s);
+//ft_putnbr
+//ft_putchar_fd
+//ft_putstr_fd
+//ft_putendl_fd
+//ft_putnbr_fd
 #endif

@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 19:30:13 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/17 16:25:36 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/17 17:57:33 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	*ft_strlcat(char *destination, const char *const_src, size_t number)
 {
 	char	*end_of_dest;
-	size_t		counter;
+	size_t	counter;
 
 	counter = 0;
 	while (destination[counter])
