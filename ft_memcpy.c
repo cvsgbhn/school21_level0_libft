@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 17:57:06 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/16 19:22:01 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/17 16:05:49 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *str1, const void *str2, size_t n)
 {
 	char	*destination;
 	char	*source;
-	int		counter;
+	size_t		counter;
 
 	destination = (char *)str1;
 	source = (char *)str2;
