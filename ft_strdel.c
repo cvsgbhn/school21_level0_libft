@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/19 17:26:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 17:59:46 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/19 18:01:47 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/19 18:24:26 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-void	ft_memdel(void **ap)
+void	ft_strdel(char **as)
 {
 	int		counter;
 	int		length;
 	void	*current_ptr;
 
 	counter = 0;
-	length = ft_strlen((const char *)ap);
-	while (counter < length / 2)
+	length = ft_strlen((const char *)as);
+	while (counter < length + 1)
 	{
-		current_ptr = ap[counter];
+		current_ptr = as[counter];
 		free(current_ptr);
 		counter++;
 	}

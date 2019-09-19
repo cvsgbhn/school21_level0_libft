@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 18:56:11 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/18 18:18:18 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/19 17:54:45 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ char	*ft_itoa(int n)
 {
 	int		count_size;
 	int		decimal;
-	int		digit;
 	int		flag;
 	char	*number;
 

@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/19 17:26:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 17:59:46 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/19 18:40:52 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/19 18:50:38 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-void	ft_memdel(void **ap)
+char	*ft_strnew(size_t size)
 {
-	int		counter;
+	char	*string;
 	int		length;
-	void	*current_ptr;
 
-	counter = 0;
-	length = ft_strlen((const char *)ap);
-	while (counter < length / 2)
-	{
-		current_ptr = ap[counter];
-		free(current_ptr);
-		counter++;
-	}
-	free(ap);
-	return (**ap);
+	string = (char *)malloc(sizeof(char) * size);
+	length = size;
+	string[length - 1] = '\0';
+	return (string);
 }

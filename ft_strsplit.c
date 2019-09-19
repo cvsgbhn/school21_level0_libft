@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 14:21:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/18 16:40:35 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/19 17:58:33 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ int		ft_count_chars(char const *s, char c)
 	while (*s)
 	{
 		if (*s == c)
-			return (index);
+			return (counter);
 		counter++;
 		s++;
 	}
-	return (index);
+	return (counter);
 }
 
 char	**ft_strsplit(char const *s, char c)

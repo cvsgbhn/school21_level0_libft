@@ -6,24 +6,24 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 17:58:45 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/18 17:58:47 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/19 17:57:10 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-void	ft_putnbr(int nb, int fd);
+void	ft_putnbr_fd(int nb, int fd);
 
 void	check_for_min(int nb, int fd)
 {
 	ft_putchar('-');
 	ft_putchar('2');
-	ft_putnbr(nb - 2000000000, fd);
+	ft_putnbr_fd(nb - 2000000000, fd);
 	ft_putchar('\0');
 	return ;
 }
 
-void	ft_putnbr(int nb, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	int counter;
 	int a_nb[10];

@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 16:18:08 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/17 18:48:15 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/19 19:57:30 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ int		ft_toupper(int character);
 int		ft_tolower(int character);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
-//ft_memalloc
-//ft_memdel
-//ft_strnew
-//ft_strdel
+void    *ft_memalloc(size_t size);
+void  ft_memdel(void **ap);
+char    *ft_strnew(size_t size);
+void    ft_strdel(char **as);
 void    ft_strclr(char *s);
 void    ft_striter(char *s, void (*f)(char *));
 void    ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -57,15 +57,16 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char *));
 //ft_strmapi
 int     ft_strequ(char const *s1, char const *s2);
 int     ft_strnequ(char const *s1, char const *s2, size_t n);
-//ft_strsub
+char    *ft_strsub(char const *s, unsigned int start, size_t len);
 //ft_strjoin
-//ft_strtrim
-//ft_strsplit
-//ft_itoa
+char    *ft_strtrim(char const *s);
+char    **ft_strsplit(char const *s, char c);
+char    *ft_itoa(int n);
 void    ft_putendl(char const *s);
-//ft_putnbr
-//ft_putchar_fd
-//ft_putstr_fd
-//ft_putendl_fd
-//ft_putnbr_fd
+void    ft_putnbr(int nb);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *str, int fd);
+void    ft_putendl(char const *s);
+void	ft_putendl_fd(char const *s, int fd);
+void    ft_putnbr_fd(int nb, int fd);
 #endif

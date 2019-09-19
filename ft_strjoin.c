@@ -1,31 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/19 17:26:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 17:59:46 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/19 19:59:14 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/19 20:01:28 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
-
-void	ft_memdel(void **ap)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		counter;
-	int		length;
-	void	*current_ptr;
-
-	counter = 0;
-	length = ft_strlen((const char *)ap);
-	while (counter < length / 2)
-	{
-		current_ptr = ap[counter];
-		free(current_ptr);
-		counter++;
-	}
-	free(ap);
-	return (**ap);
+	
 }
