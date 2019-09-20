@@ -27,5 +27,7 @@ const char	*ft_strchr(const char *string, int symbol)
 			return (&string[counter]);
 		counter++;
 	}
+	if (string[counter] == symbol)
+	  return (&string[counter]);
 	return (0);
 }

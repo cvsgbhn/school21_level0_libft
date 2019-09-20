@@ -12,19 +12,22 @@
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int symbol)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*pointer;
-	char	*restr;
 	int		counter;
+	int		k;
 
-	restr = (char *)str;
+	k = -1;
 	counter = 0;
-	while (restr[counter])
+	while (s[counter])
 	{
-		if (restr[counter] == symbol)
-			pointer = &(restr[counter]);
-		counter++;
+	  if (s[counter] == (unsigned char)c)
+	    k = counter;
+	  counter++;
 	}
-	return (pointer);
+	if (c == '\0')
+	  return ((char*)(s + counter));
+	if (k != -1)
+	  return ((char*)(s + k));
+	return (NULL);
 }

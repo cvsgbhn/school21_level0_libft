@@ -6,15 +6,15 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:22:11 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:31:47 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 19:13:48 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h>"
+#include "libft.h"
 
-char	*ft_strnstr(const char *hstck, const char *ndl)
+char	*ft_strnstr(const char *hstck, const char *ndl, size_t h_length)
 {
-	int		h_counter;
+	size_t	h_counter;
 	int		n_counter;
 	char	*ft_hstk;
 	char	*ft_ndl;

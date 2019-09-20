@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 14:21:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 17:23:20 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 19:11:38 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	**ft_strsplit(char const *s, char c)
 			s++;
 		chars_in_word = ft_count_chars(s, c);
 		main_array[index] = (char *)malloc(sizeof(char) * chars_in_word);
-		strncpy(main_array[index], s, chars_in_word);
+		ft_strncpy(main_array[index], s, chars_in_word);
 		s += chars_in_word;
 		index++;
 	}

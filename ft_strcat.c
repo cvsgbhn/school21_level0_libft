@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-char	*ft_strcat(char *destination, const char *const_src)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	char	*end_of_dest;
 	int		counter;
 
 	counter = 0;
-	while (destination[counter])
+	while (s1[counter])
 		counter++;
-	end_of_dest = &(destination[counter]);
-	ft_memcpy(end_of_dest, const_src, ft_strlen(const_src));
-	return (destination);
+	while (*s2)
+	  s1[counter++] = *s2++;
+	s1[counter] = 0;
+	return (s1);
 }

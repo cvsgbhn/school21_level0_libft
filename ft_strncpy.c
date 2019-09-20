@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 16:46:28 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:13:53 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 19:11:14 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char	*ft_strncpy(char *destination, const char *source, size_t len)
 {
-	while (*source && len > 0)
+  size_t i;
+
+  i = 0;
+	while (source[i] && len--)
 	{
-		*destination = *source;
-		destination++;
-		source++;
-		len--;
+		destination[i] = source[i];
+		i++;
 	}
-	*destination = '\0';
+	while (len--)
+	  destination[i++] = '\0';
 	return (destination);
 }
