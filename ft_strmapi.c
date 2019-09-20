@@ -1,19 +1,31 @@
-#include "ft_libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/20 14:20:35 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/20 14:37:34 by vdanilo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_strmapi(char *s, char (*f)(unsigned int, char))
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int length;
-	int counter;
-	int index;
-	char *f_results;
+	int		length;
+	int		counter;
+	int		index;
+	char	*f_results;
 
 	length = ft_strlen(s);
-	counter= 0;
+	counter = 0;
 	index = 0;
 	f_results = (char *)malloc(sizeof(char) * (length + 1));
 	while (*s)
 	{
-		f_results[counter] = f(index, s);
+		f_results[counter] = f(index, *s);
 		counter++;
 		s++;
 		index++;

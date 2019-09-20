@@ -6,42 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 14:21:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 17:58:33 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 17:23:20 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
-
-int		ft_count_words(char const *s, char c)
-{
-	int counter;
-	int index;
-
-	counter = 0;
-	index = 0;
-	while (s[index])
-	{
-		if (s[index] != c && (s[index - 1] == c || index == 0))
-			counter++;
-		index++;
-	}
-	return (counter);
-}
-
-int		ft_count_chars(char const *s, char c)
-{
-	int counter;
-
-	counter = 0;
-	while (*s)
-	{
-		if (*s == c)
-			return (counter);
-		counter++;
-		s++;
-	}
-	return (counter);
-}
+#include "libft.h"
 
 char	**ft_strsplit(char const *s, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 17:54:47 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 17:56:23 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 14:09:48 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_putendl_fd(char const *s, int fd)
 {

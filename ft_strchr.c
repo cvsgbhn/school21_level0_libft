@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 16:01:25 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/16 19:27:13 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 14:10:52 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 const char	*ft_strchr(const char *string, int symbol)
 {

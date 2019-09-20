@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 14:30:19 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/16 19:16:06 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 14:03:53 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

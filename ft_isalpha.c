@@ -1,6 +1,20 @@
-int	ft_isalpha(int character)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/20 14:04:37 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/20 17:40:09 by vdanilo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isalpha(int chr)
 {
-	if ((character >= 'a' && character <= 'z') || (character >= 'A' && character <= 'Z'))
+	if ((chr >= 'a' && chr <= 'z') || (chr >= 'A' && chr <= 'Z'))
 		return (1);
 	return (0);
 }

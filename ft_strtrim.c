@@ -6,25 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 14:19:24 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 16:54:55 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 17:26:51 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
-
-int		ft_count_whitespaces(char const *s)
-{
-	int counter;
-
-	counter = 0;
-	while (*s)
-	{
-		if (*s == ' ' || *s == '\t' || *s == '\n')
-			counter++;
-		s++;
-	}
-	return (counter);
-}
+#include "libft.h"
 
 char	*ft_strtrim(char const *s)
 {

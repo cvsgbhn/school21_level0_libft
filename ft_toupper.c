@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 19:38:32 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/16 19:39:04 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 14:14:54 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 int		ft_toupper(int character)
 {

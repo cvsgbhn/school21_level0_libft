@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_count_chars.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 19:12:01 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:10:36 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/20 17:24:59 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/20 17:25:02 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *destination, const char *const_src)
+int		ft_count_chars(char const *s, char c)
 {
-	char	*end_of_dest;
-	int		counter;
+	int counter;
 
 	counter = 0;
-	while (destination[counter])
+	while (*s)
+	{
+		if (*s == c)
+			return (counter);
 		counter++;
-	end_of_dest = &(destination[counter]);
-	ft_memcpy(end_of_dest, const_src, ft_strlen(const_src));
-	return (destination);
+		s++;
+	}
+	return (counter);
 }

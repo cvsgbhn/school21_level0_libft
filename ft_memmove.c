@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:13:41 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/16 19:20:16 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 14:08:12 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *adestination, const void *asource, size_t n)
 {

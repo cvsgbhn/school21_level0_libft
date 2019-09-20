@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_count_words.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 19:12:01 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:10:36 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/20 17:25:09 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/20 17:25:11 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *destination, const char *const_src)
+int		ft_count_words(char const *s, char c)
 {
-	char	*end_of_dest;
-	int		counter;
+	int counter;
+	int index;
 
 	counter = 0;
-	while (destination[counter])
-		counter++;
-	end_of_dest = &(destination[counter]);
-	ft_memcpy(end_of_dest, const_src, ft_strlen(const_src));
-	return (destination);
+	index = 0;
+	while (s[index])
+	{
+		if (s[index] != c && (s[index - 1] == c || index == 0))
+			counter++;
+		index++;
+	}
+	return (counter);
 }

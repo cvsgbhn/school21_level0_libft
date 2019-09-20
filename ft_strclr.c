@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 16:59:08 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/17 17:46:02 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 14:11:05 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {

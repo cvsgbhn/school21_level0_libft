@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   check_for_min.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 19:12:01 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:10:36 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/20 14:59:12 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/20 14:59:34 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *destination, const char *const_src)
+void	check_for_min(int nb)
 {
-	char	*end_of_dest;
-	int		counter;
-
-	counter = 0;
-	while (destination[counter])
-		counter++;
-	end_of_dest = &(destination[counter]);
-	ft_memcpy(end_of_dest, const_src, ft_strlen(const_src));
-	return (destination);
+	ft_putchar('-');
+	ft_putchar('2');
+	ft_putnbr(nb - 2000000000);
+	ft_putchar('\0');
+	return ;
 }

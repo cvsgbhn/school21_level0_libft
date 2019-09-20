@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 19:12:01 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:10:36 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/20 14:40:43 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/20 14:40:51 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *destination, const char *const_src)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*end_of_dest;
-	int		counter;
-
-	counter = 0;
-	while (destination[counter])
-		counter++;
-	end_of_dest = &(destination[counter]);
-	ft_memcpy(end_of_dest, const_src, ft_strlen(const_src));
-	return (destination);
+	write(fd, &c, 1);
 }

@@ -6,22 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 09:13:26 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 16:57:01 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 15:01:04 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
-
-void	ft_putnbr(int nb);
-
-void	check_for_min(int nb)
-{
-	ft_putchar('-');
-	ft_putchar('2');
-	ft_putnbr(nb - 2000000000);
-	ft_putchar('\0');
-	return ;
-}
+#include "libft.h"
 
 void	ft_putnbr(int nb)
 {

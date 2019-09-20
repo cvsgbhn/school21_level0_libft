@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   write_to_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 19:12:01 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:10:36 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/20 14:55:55 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/20 14:56:20 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *destination, const char *const_src)
+char	*write_to_char(char *number, int n, int decimal, int count_size)
 {
-	char	*end_of_dest;
-	int		counter;
+	int digit;
 
-	counter = 0;
-	while (destination[counter])
-		counter++;
-	end_of_dest = &(destination[counter]);
-	ft_memcpy(end_of_dest, const_src, ft_strlen(const_src));
-	return (destination);
+	while (decimal > 1)
+	{
+		digit = 1;
+		decimal = decimal / 10;
+		while (n - (decimal * digit) >= 0)
+			digit++;
+		number[count_size] = (digit - 1) + '0';
+		count_size++;
+		n = n - (decimal * (digit - 1));
+	}
+	return (number);
 }

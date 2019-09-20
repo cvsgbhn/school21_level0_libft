@@ -1,29 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/20 14:22:11 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/20 14:31:47 by vdanilo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_libft.h>"
 
-char	*ft_strnstr(const char *haystack, const char *needle)
+char	*ft_strnstr(const char *hstck, const char *ndl)
 {
-	int h_counter;
-	int n_counter;
-	char *ft_haystack;
-	char *ft_needle;
+	int		h_counter;
+	int		n_counter;
+	char	*ft_hstk;
+	char	*ft_ndl;
 
 	h_counter = 0;
-	ft_haystack = (char *)haystack;
-	ft_needle = (char *)needle;
-	while (ft_haystack[h_counter] && h_counter < h_length)
+	ft_hstk = (char *)hstck;
+	ft_ndl = (char *)ndl;
+	while (ft_hstk[h_counter] && h_counter < h_length)
 	{
 		n_counter = 0;
-		while (ft_haystack[h_counter] == ft_needle[n_counter] && ft_needle[n_counter])
+		while (ft_hstk[h_counter] == ft_ndl[n_counter] && ft_ndl[n_counter])
 		{
 			h_counter++;
 			n_counter++;
 		}
 		h_counter -= n_counter;
-		if (ft_needle[n_counter] == '\0')
-			return (&(ft_haystack[h_counter]));
+		if (ft_ndl[n_counter] == '\0')
+			return (&(ft_hstk[h_counter]));
 		h_counter++;
-}
-return (0);
-}
 	}
+	return (0);
 }

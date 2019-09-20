@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 18:01:47 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 18:24:26 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 17:43:55 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_strdel(char **as)
 {
@@ -26,6 +26,5 @@ void	ft_strdel(char **as)
 		free(current_ptr);
 		counter++;
 	}
-	free(ap);
-	return (**ap);
+	free(as);
 }

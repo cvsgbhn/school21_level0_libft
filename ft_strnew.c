@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 18:40:52 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/19 18:50:38 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/20 14:32:55 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 char	*ft_strnew(size_t size)
 {
