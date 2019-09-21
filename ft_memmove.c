@@ -6,19 +6,38 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:13:41 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:08:12 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/21 16:08:09 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *adestination, const void *asource, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *source;
-	char temp_array[n];
+	unsigned char	*source;
+	unsigned char	*dst_array;
+	size_t			counter;
 
-	source = (char *)asource;
-	ft_strncpy(temp_array, source, n);
-	ft_strncpy(adestination, temp_array, n);
-	return (adestination);
+	if (dst == src)
+		return (dst);
+	source = (unsigned char *)src;
+	dst_array = (unsigned char *)dst;
+	if (dst > src)
+	{
+		while (len != 0)
+		{
+			len--;
+			dst_array[len] = source[len];
+		}
+	}
+	else
+	{
+		counter = 0;
+		while (counter < len)
+		{
+			dst_array[counter] = source[counter];
+			counter++;
+		}
+	}
+	return (dst);
 }

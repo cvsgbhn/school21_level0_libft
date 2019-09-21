@@ -6,21 +6,21 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 14:03:27 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:13:11 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/21 11:59:52 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
 	size_t counter;
 
 	counter = 0;
-	while (*str)
+	while (*s)
 	{
 		counter++;
-		str++;
+		s++;
 	}
 	return (counter);
 }

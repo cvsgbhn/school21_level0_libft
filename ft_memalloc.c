@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 18:27:53 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:06:33 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/21 14:01:27 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,7 @@ void	*ft_memalloc(size_t size)
 	void *memory;
 
 	memory = (void *)malloc(sizeof(void) * size);
+	if (memory != NULL)
+		ft_memset(memory, 0, sizeof(void) * size);
 	return (memory);
 }

@@ -6,21 +6,30 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 19:30:13 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 19:22:33 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/21 18:57:43 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	*ft_strlcat(char *dest, const char *const_src, size_t number)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char	*end_of_dest;
+	size_t	count_size;
 	size_t	counter;
 
-	counter = 0;
-	while (dest[counter])
+	count_size = 0;
+	if (dst == src)
+		return(ft_strlen(dst) + 1);
+	while (dst[count_size] && count_size < size)
+		count_size++;
+	if (count_size == size)
+		return (size + ft_strlen(src));
+	counter = count_size;
+	while (counter < size - 1 && src[counter])
+	{
+		dst[counter] = src[counter - count_size];
 		counter++;
-	end_of_dest = &(dest[counter]);
-	ft_memcpy(end_of_dest, const_src, number);
-	return ((size_t *)(number + counter + 1));
+	}
+	dst[counter] = '\0';
+	return ((size + counter));
 }

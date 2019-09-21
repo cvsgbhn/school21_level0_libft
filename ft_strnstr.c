@@ -6,13 +6,13 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:22:11 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 19:13:48 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/21 19:04:50 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hstck, const char *ndl, size_t h_length)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	h_counter;
 	int		n_counter;
@@ -20,9 +20,11 @@ char	*ft_strnstr(const char *hstck, const char *ndl, size_t h_length)
 	char	*ft_ndl;
 
 	h_counter = 0;
-	ft_hstk = (char *)hstck;
-	ft_ndl = (char *)ndl;
-	while (ft_hstk[h_counter] && h_counter < h_length)
+	ft_hstk = (char *)haystack;
+	ft_ndl = (char *)needle;
+	if (haystack == needle)
+		return ((char *)haystack);
+	while (ft_hstk[h_counter] && h_counter < len - 1)
 	{
 		n_counter = 0;
 		while (ft_hstk[h_counter] == ft_ndl[n_counter] && ft_ndl[n_counter])
@@ -35,5 +37,5 @@ char	*ft_strnstr(const char *hstck, const char *ndl, size_t h_length)
 			return (&(ft_hstk[h_counter]));
 		h_counter++;
 	}
-	return (0);
+	return (NULL);
 }

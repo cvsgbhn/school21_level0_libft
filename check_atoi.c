@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   check_atoi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/19 18:01:47 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/21 17:12:28 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/21 15:07:52 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/21 15:21:35 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+int		check_atoi(int result, int next, int flag)
 {
-	int		counter;
-	int		length;
-	void	*current_ptr;
-
-	counter = 0;
-	if (!as)
-		free(as);
-	length = ft_strlen((const char *)as);
-	while (counter < length + 1)
-	{
-		current_ptr = as[counter];
-		free(current_ptr);
-		counter++;
-	}
-	free(as);
+	if (result * 10 == 2147483640 && next > 7 && flag == 1)
+	   return (1);
+	if (result * 10 == 2147483640 && next > 8 && flag == -1)
+		return (1);
+	return (0);
 }
