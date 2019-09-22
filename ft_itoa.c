@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 18:56:11 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/21 17:13:28 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/22 17:59:12 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,24 @@
 char	*ft_itoa(int n)
 {
 	int		count_size;
-	int		decimal;
 	int		flag;
+	int		counter;
 	char	*number;
 
-	count_size = 1;
-	decimal = 10;
-	flag = set_flag(n);
-	flag < 0 ? n *= -1 : n;
-	flag < 0 ? count_size++ : count_size;
-	while (n / decimal > 0)
+	count_size = count_num_size(n);
+	(n < 0) ? (flag = 1) : (flag = 0);
+	if (!(number = ft_strnew(count_size + flag))) 
+		return (NULL);
+	counter = count_size + flag - 1;
+	number[counter] = '\0';
+	flag ? (number[0] = '-') : number[0];
+	while (counter >= flag)
 	{
-		count_size++;
-		decimal *= 10;
+		if (flag)
+			number[counter--] = (n % 10 * - 1) + '0';
+		else
+			number[counter--] = n % 10 + '0';
+		n  = n / 10;
 	}
-	number = (char *)malloc((count_size + 1) * sizeof(char));
-	if (!number)
-		return (0);
-	number[count_size] = '\0';
-	count_size = 0;
-	flag < 0 ? number[0] = '-' : number[0];
-	flag < 0 ? count_size++ : count_size;
-	number = write_to_char(number, n, decimal, count_size);
 	return (number);
 }

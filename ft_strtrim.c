@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 14:19:24 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 19:12:02 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/22 16:42:23 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,28 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t	new_length;
-	int		index_copy;
-	int		index;
+	size_t	length;
+	size_t	index1;
+	size_t	index2;
 	char	*copy;
 
-	index = 0;
-	index_copy = 0;
-	new_length = ft_strlen(s) - ft_count_whitespaces(s);
-	copy = (char *)malloc(sizeof(char) * new_length);
-	if (!copy)
-		return (0);
-	while (s[index])
+	if (!s)
+		return (NULL);
+	index1 = 0;
+	length = ft_strlen((const char *)s);
+	while (s[index1] == ' ' || s[index1] == '\t' || s[index1] == '\n')
+		index1++;
+	if (index1 == length)
+		return (ft_strnew(0));
+	while (s[length - 1] == ' '|| s[length - 1] == '\t' || s[length - 1] == '\n')
+		length--;
+	if( !(copy = ft_strnew(length - index1)))
+			return (NULL);
+	index2 = 0;
+	while (index1 < length)
 	{
-		if (s[index] != ' ' && s[index] != '\t' && s[index] != '\n')
-		{
-			copy[index_copy] = s[index];
-			index_copy++;
-		}
-		index++;
+		copy[index2++] = s[index1++];	
 	}
+	copy[index2] = '\0';
 	return (copy);
 }

@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 16:18:08 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/21 17:05:04 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/22 16:50:58 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,5 @@ int			ft_count_words(char const *s, char c);
 int			ft_count_chars(char const *s, char c);
 int			ft_count_whitespaces(char const *s);
 int			check_atoi(int result, int next, int flag);
+int			count_num_size(int n);
 #endif

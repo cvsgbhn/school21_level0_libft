@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/05 09:13:26 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/21 17:17:59 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/22 17:26:04 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/22 17:26:19 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,26 @@
 void	ft_putnbr(int nb)
 {
 	int counter;
-	int a_nb[10];
+	int n;
 
-	counter = 0;
-	if (nb == -2147483648)
+	n = nb % 10;
+	nb = nb / 10;
+	if (nb < 0 || n < 0)
 	{
-		check_for_min(nb);
-		return ;
-	}
-	if (nb < 0)
-	{
-		nb = -nb;
 		ft_putchar('-');
+		nb *= - 1;
+		n *= - 1;
 	}
-	while (nb / 10 >= 0.001)
+	if (nb != 0)
 	{
-		a_nb[counter] = nb % 10;
-		nb = (nb - nb % 10) / 10;
-		counter++;
+		counter = 1;
+		while (counter * 10 <= nb)
+			counter *= 10;
+		while (counter != 0)
+		{
+			ft_putchar(nb / counter % 10 + '0');
+			counter = counter / 10;
+		}
 	}
-	a_nb[counter] = nb % 10;
-	while (counter-- >= 0)
-	{
-		ft_putchar(a_nb[counter] + '0');
-	}
+	ft_putchar(n + '0');
 }

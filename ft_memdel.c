@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:26:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/21 14:01:58 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/22 15:40:44 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	int		counter;
-	int		length;
-	void	*current_ptr;
-
-	counter = 0;
-	length = ft_strlen((const char *)ap);
-	while (counter < length / 2)
+	if (ap && *ap)
 	{
-		current_ptr = ap[counter];
-		free(current_ptr);
-		counter++;
+		free(*ap);
+		*ap = NULL;
 	}
-	free(ap);
-	return (**ap);
 }

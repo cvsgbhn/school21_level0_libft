@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   count_num_size.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 17:25:09 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/22 14:48:02 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/22 16:46:48 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/22 16:56:56 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_words(char const *s, char c)
+int		count_num_size(int n)
 {
-	int counter;
-	int index;
+	int count;
 
-	counter = 0;
-	index = 0;
-	while (s[index])
+	count = 1;
+	while (n / 10 != 0)
 	{
-		if (s[index] != c && (s[index - 1] == c || index == 0))
-			counter++;
-		index++;
+		n = n / 10;
+		count++;
 	}
-	return (counter);
+	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:20:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/21 13:44:52 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/22 18:44:13 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		index;
 	char	*f_results;
 
+	if (!s || !f)
+		return (NULL);
 	length = ft_strlen(s);
 	counter = 0;
 	index = 0;
