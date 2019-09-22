@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 18:56:11 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/22 17:59:12 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/22 19:56:22 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*ft_itoa(int n)
 	int		counter;
 	char	*number;
 
+	flag = 0;
 	count_size = count_num_size(n);
-	(n < 0) ? (flag = 1) : (flag = 0);
-	if (!(number = ft_strnew(count_size + flag))) 
+	if (n < 0)
+		flag = 1;
+	if (!(number = ft_strnew(count_size + flag)))
 		return (NULL);
 	counter = count_size + flag - 1;
 	number[counter] = '\0';
@@ -29,10 +31,10 @@ char	*ft_itoa(int n)
 	while (counter >= flag)
 	{
 		if (flag)
-			number[counter--] = (n % 10 * - 1) + '0';
+			number[counter--] = (n % 10 * -1) + '0';
 		else
 			number[counter--] = n % 10 + '0';
-		n  = n / 10;
+		n = n / 10;
 	}
 	return (number);
 }

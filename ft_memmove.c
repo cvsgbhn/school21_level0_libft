@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:13:41 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/21 16:08:09 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/22 19:57:27 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	dst_array = (unsigned char *)dst;
 	if (dst > src)
 	{
-		while (len != 0)
-		{
-			len--;
+		while (len-- != 0)
 			dst_array[len] = source[len];
-		}
 	}
 	else
 	{
