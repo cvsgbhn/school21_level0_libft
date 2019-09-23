@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 19:33:15 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/22 19:52:23 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/23 18:35:58 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	unsigned int	counter;
 
 	counter = 0;
-	if (!s || len == 0)
+	if (!s)
 		return (NULL);
 	while (counter < start)
 	{

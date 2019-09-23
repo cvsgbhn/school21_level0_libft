@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 19:35:59 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/21 19:04:47 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/23 18:27:57 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,27 @@
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
-	int		h_count;
-	int		n_count;
+	size_t	i;
+	size_t	n_len;
 	char	*ft_haystack;
 	char	*ft_needle;
 
-	h_count = 0;
+	i = 0;
+	if (!needle[i])
+		return ((char*)haystack);
+	n_len = ft_strlen(needle);
 	ft_haystack = (char *)haystack;
 	ft_needle = (char *)needle;
 	if (haystack == needle)
 		return ((char *)haystack);
-	while (ft_haystack[h_count])
+	while (*ft_haystack && n_len)
 	{
-		n_count = 0;
-		while (ft_haystack[h_count] == ft_needle[n_count] && ft_needle[n_count])
-		{
-			h_count++;
-			n_count++;
-		}
-		h_count -= n_count;
-		if (ft_needle[n_count] == '\0')
-			return (&(ft_haystack[h_count]));
-		h_count++;
+		while (ft_haystack[i] == ft_needle[i] && ft_needle[i] && ft_haystack[i])
+			i++;
+		if (ft_needle[i] == '\0')
+			return (ft_haystack);
+		ft_haystack++;
+		i = 0;
 	}
-	return (0);
+	return (NULL);
 }
