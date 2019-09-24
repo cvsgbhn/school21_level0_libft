@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 19:59:14 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/22 15:57:45 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/24 19:41:09 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	sum_len = 0;
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	concatenated = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
-	if (!concatenated)
+	if (!(concatenated = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1))))
 		return (NULL);
 	while (sum_len < len_s1)
 	{

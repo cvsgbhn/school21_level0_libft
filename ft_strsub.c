@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 19:33:15 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/23 18:35:58 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/24 17:22:14 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		s++;
 		counter++;
 	}
-	substring = (char *)malloc(sizeof(char) * (len + 1));
-	if (!substring)
+	if (!(substring = (char *)malloc(sizeof(char) * (len + 1))))
 		return (0);
 	substring = ft_strncpy(substring, s, len);
 	substring[len] = '\0';

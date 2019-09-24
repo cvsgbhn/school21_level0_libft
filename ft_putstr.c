@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:41:13 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/20 14:41:22 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/24 17:38:51 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	ft_putstr(char *str)
 {
-	while (*str)
+	size_t length;
+
+	if (str)
 	{
-		ft_putchar(*str);
-		str++;
+		length = ft_strlen(str);
+		write(1, str, length);
 	}
 }

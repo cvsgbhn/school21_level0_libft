@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_check_overflow.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 14:41:31 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/24 15:16:23 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/24 14:44:02 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/24 18:58:05 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *str, int fd)
+int		ft_check_overflow(int flag, int result, int y)
 {
-	size_t length;
-
-	if (str)
-	{
-		length = ft_strlen(str);
-		write(fd, str, length);
-	}
+	if (flag == 1 && result == 214748364 && y > 7)
+		return (-1);
+	else if (flag == -1 && result == 214748364 && y > 8)
+		return (0);
+	else if (flag * (result * 10 + y) == -2147483648)
+		return (flag *(result * 10 + y));
+	else if (flag * (result * 10 + y) == 2147483647)
+		return (flag *(result * 10 + y));
+	return (flag * (result * 10 + y));
 }

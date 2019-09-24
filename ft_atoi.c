@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 13:39:58 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/22 17:54:15 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/24 20:04:58 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ int		ft_atoi(const char *str)
 	{
 		if (str[cntr] < '0' || str[cntr] > '9')
 			return (result * flag);
+		if (result > result * 10 + (str[cntr] - '0'))
+			return (ft_check_overflow(flag, result, str[cntr] - '0'));
 		result = result * 10 + (str[cntr] - '0');
 		cntr++;
 	}
-	result = result * flag;
-	return (result);
+	return (result * flag);
 }
