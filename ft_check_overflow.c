@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 14:44:02 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/24 18:58:05 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/25 10:58:21 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_check_overflow(int flag, int result, int y)
 {
-	if (flag == 1 && result == 214748364 && y > 7)
+	if (flag == 1 && ((result == 214748364 && y > 7) || result > 214748364))
 		return (-1);
-	else if (flag == -1 && result == 214748364 && y > 8)
+	else if (flag == -1 && ((result == 214748364 && y > 8) || result > 214748364))
 		return (0);
 	else if (flag * (result * 10 + y) == -2147483648)
 		return (flag *(result * 10 + y));
