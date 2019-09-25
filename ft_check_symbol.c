@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_check_symbol.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 13:39:58 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/25 13:23:51 by vdanilo          ###   ########.fr       */
+/*   Created: 2019/09/25 12:00:41 by vdanilo           #+#    #+#             */
+/*   Updated: 2019/09/25 12:07:42 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int		ft_check_symbol(int cntr, const char *str)
 {
-	int				cntr;
-	int				flag;
-	unsigned long	result;
-
-	cntr = 0;
-	flag = 1;
-	result = 0;
-	cntr = ft_check_symbol(cntr, str);
-	if (str[cntr] == '-')
-	{
-		flag = -1;
+	while (str[cntr] == ' ' || (str[cntr] >= '\t' && str[cntr] <= '\r'))
 		cntr++;
-	}
-	while (str[cntr])
-	{
-		if (str[cntr] < '0' || str[cntr] > '9')
-			return (result * flag);
-		result = result * 10 + (str[cntr] - '0');
+	if (str[cntr] == '+' && str[cntr + 1] >= '0' && str[cntr + 1] <= '9')
 		cntr++;
-	}
-	if (result <= 9223372036854775808uL)
-		return ((int)result * flag);
-	return (flag == 1 ? -1 : 0);
+	return (cntr);
 }
