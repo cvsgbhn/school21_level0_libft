@@ -18,6 +18,8 @@ char	*ft_strnew(size_t size)
 	size_t		length;
 
 	length = 0;
+	if (size > size + 1)
+	    return (NULL);
 	string = ft_memalloc(size + 1);
 	if (!string)
 		return (NULL);
