@@ -78,4 +78,5 @@ int		ft_count_chars(char const *s, char c);
 int		ft_count_whitespaces(char const *s);
 int		count_num_size(int n);
 int     ft_check_overflow(int flag, int result, int y);
+void    ft_freearr(**array);
 #endif

@@ -1,4 +1,4 @@
-void    ft_freearr(**array)
+void    ft_freearr(char **array)
 {
     while (*array)
     {
