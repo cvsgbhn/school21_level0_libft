@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 16:18:08 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/25 12:12:39 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/25 19:30:57 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,7 @@ int		ft_count_words(char const *s, char c);
 int		ft_count_chars(char const *s, char c);
 int		ft_count_whitespaces(char const *s);
 int		count_num_size(int n);
+int     ft_check_overflow(int flag, int result, int y);
+void    ft_freearr(char **array);
 int		ft_check_symbol(int cntr, const char *str);
 #endif
