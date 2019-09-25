@@ -33,7 +33,10 @@ char	**ft_strsplit(char const *s, char c)
 			s++;
 		chars_in_word = ft_count_chars(s, c);
 		if (!(main_array[index] = (char *)malloc(sizeof(char) * chars_in_word)))
-			return (0);
+        {
+		    ft_freearr(main_array);
+		    return (0);
+        }
 		ft_strncpy(main_array[index], s, chars_in_word);
 		s += chars_in_word;
 		index++;
