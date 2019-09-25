@@ -1,3 +1,5 @@
+#include "libft.h"
+
 void    ft_freearr(char **array)
 {
     while (*array)
