@@ -19,7 +19,7 @@ SOURCES = ft_atoi.c ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c 
 			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strtrim.c ft_strsplit.c ft_memdel.c ft_memalloc.c \
 			ft_strnew.c ft_strsub.c ft_strjoin.c ft_strmap.c ft_strmapi.c set_flag.c write_to_char.c \
 			ft_count_chars.c ft_count_words.c ft_count_whitespaces.c ft_strdel.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
-			ft_isdigit.c ft_isprint.c ft_strnstr.c count_num_size.c ft_freearr.c ft_check_symbol.c
+			ft_isdigit.c ft_isprint.c ft_strnstr.c count_num_size.c ft_freearr.c ft_check_symbol.c ft_lstnew.c
 
 OBJECTS = ${SOURCES:.c=.o}
 

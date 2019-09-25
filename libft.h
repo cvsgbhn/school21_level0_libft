@@ -87,4 +87,5 @@ int		count_num_size(int n);
 int     ft_check_overflow(int flag, int result, int y);
 void    ft_freearr(char **array);
 int		ft_check_symbol(int cntr, const char *str);
+t_list  *ft_lstnew(void const *content, size_t content_size);
 #endif
