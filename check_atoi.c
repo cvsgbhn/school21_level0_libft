@@ -15,7 +15,7 @@
 int		check_atoi(int result, int next, int flag)
 {
 	if (result * 10 == 2147483640 && next > 7 && flag == 1)
-	   return (1);
+		return (1);
 	if (result * 10 == 2147483640 && next > 8 && flag == -1)
 		return (1);
 	return (0);

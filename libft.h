@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 16:18:08 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/25 19:55:14 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/26 14:42:02 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ int		count_num_size(int n);
 int     ft_check_overflow(int flag, int result, int y);
 void    ft_freearr(char **array);
 int		ft_check_symbol(int cntr, const char *str);
-t_list  *ft_lstnew(void const *content, size_t content_size);
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstadd(t_list **alst, t_list *new);
 #endif
