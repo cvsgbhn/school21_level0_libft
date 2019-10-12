@@ -28,7 +28,7 @@ INCLUDES = libft.h
 
 all: $(NAME) 
 
-$(NAME): $(SRCS) $(OBJECTS) $(INCLUDES)
+$(NAME): $(SOURCES) $(OBJECTS) $(INCLUDES)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
