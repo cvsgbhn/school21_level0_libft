@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 16:18:08 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/30 12:29:14 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/11/21 21:02:49 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 # include <string.h>
 # include <stdlib.h>
 
-typedef struct s_list
+typedef struct		s_list
 {
-    void	*content;
-    size_t	content_size;
-    struct	s_list *next;
-}			t_list;
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -84,9 +84,12 @@ int		ft_count_words(char const *s, char c);
 int		ft_count_chars(char const *s, char c);
 int		ft_count_whitespaces(char const *s);
 int		count_num_size(int n);
-int     ft_check_overflow(int flag, int result, int y);
-void    ft_freearr(char **array);
+int		ft_check_overflow(int flag, int result, int y);
+void	ft_freearr(char **array);
 int		ft_check_symbol(int cntr, const char *str);
+char	*ft_strndup(const char *s1, size_t num);
+
+/*single linked lists job*/
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
@@ -94,4 +97,5 @@ void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int		ft_lstlength(t_list *lst);
+void	ft_lstadd_toend(t_list **alst, t_list *new);
 #endif

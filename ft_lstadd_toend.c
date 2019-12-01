@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_toend.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 14:40:43 by vdanilo           #+#    #+#             */
+/*   Created: 2019/10/27 17:01:18 by vdanilo           #+#    #+#             */
 /*   Updated: 2019/11/21 21:02:49 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstadd_toend(t_list **alst, t_list *new)
 {
-	write(fd, &c, 1);
+	int		length;
+
+	length = ft_lstlength(*alst);
+	while (length-- > 0)
+		*alst = (*alst)->next;
+	(*alst)->next = new;
 }
